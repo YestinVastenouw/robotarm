@@ -14,14 +14,14 @@
             for (var i = 0; i < 9; i++) {
             	robotArm.grab();
             	if (robotArm.scan() == "red") {
-            		for (var j = 0; j < (9 - i); j++)
-            			robotArm.moveRight();
-            		robotArm.drop();
-					for (var j = 0; j < (8 - i); j++)
-            			robotArm.moveLeft();
-            	} else {
-            		robotArm.drop();
+            	    for (var j = 0; j < (9 - i); j++)
             		robotArm.moveRight();
+            	    robotArm.drop();
+		    for (var j = 0; j < (8 - i); j++)
+            		robotArm.moveLeft();
+            	} else {
+            	    robotArm.drop();
+            	    robotArm.moveRight();
             	}
             }
             // De door jou opgegeven instructies uitvoeren
