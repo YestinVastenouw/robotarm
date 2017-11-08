@@ -16,8 +16,6 @@
                 robotArm.grab();
                 if (robotArm.scan() == null)
                     break;
-
-                var color = robotArm.scan();
                 for (var j = 0; j < i - 1; j++)
                     robotArm.moveRight();
                 robotArm.drop();
